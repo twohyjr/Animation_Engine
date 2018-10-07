@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		EB4D0142216ACD66001505F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0141216ACD66001505F4 /* AppDelegate.swift */; };
-		EB4D0144216ACD66001505F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0143216ACD66001505F4 /* ViewController.swift */; };
 		EB4D0146216ACD67001505F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4D0145216ACD67001505F4 /* Assets.xcassets */; };
 		EB4D0149216ACD67001505F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4D0147216ACD67001505F4 /* Main.storyboard */; };
 		EB4D0155216ACD68001505F4 /* Animation_EngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0154216ACD68001505F4 /* Animation_EngineTests.swift */; };
+		EB4D0162216ACEF4001505F4 /* GraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0161216ACEF4001505F4 /* GraphicsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +27,6 @@
 /* Begin PBXFileReference section */
 		EB4D013E216ACD65001505F4 /* Animation_Engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animation_Engine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4D0141216ACD66001505F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB4D0143216ACD66001505F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB4D0145216ACD67001505F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB4D0148216ACD67001505F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB4D014A216ACD67001505F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +34,7 @@
 		EB4D0150216ACD68001505F4 /* Animation_EngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Animation_EngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4D0154216ACD68001505F4 /* Animation_EngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation_EngineTests.swift; sourceTree = "<group>"; };
 		EB4D0156216ACD68001505F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB4D0161216ACEF4001505F4 /* GraphicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +76,8 @@
 		EB4D0140216ACD65001505F4 /* Animation_Engine */ = {
 			isa = PBXGroup;
 			children = (
-				EB4D0141216ACD66001505F4 /* AppDelegate.swift */,
-				EB4D0143216ACD66001505F4 /* ViewController.swift */,
-				EB4D0145216ACD67001505F4 /* Assets.xcassets */,
-				EB4D0147216ACD67001505F4 /* Main.storyboard */,
-				EB4D014A216ACD67001505F4 /* Info.plist */,
-				EB4D014B216ACD67001505F4 /* Animation_Engine.entitlements */,
+				EB4D0160216ACE13001505F4 /* Display */,
+				EB4D015F216ACE0B001505F4 /* Other FIles */,
 			);
 			path = Animation_Engine;
 			sourceTree = "<group>";
@@ -93,6 +89,26 @@
 				EB4D0156216ACD68001505F4 /* Info.plist */,
 			);
 			path = Animation_EngineTests;
+			sourceTree = "<group>";
+		};
+		EB4D015F216ACE0B001505F4 /* Other FIles */ = {
+			isa = PBXGroup;
+			children = (
+				EB4D0141216ACD66001505F4 /* AppDelegate.swift */,
+				EB4D0145216ACD67001505F4 /* Assets.xcassets */,
+				EB4D014A216ACD67001505F4 /* Info.plist */,
+				EB4D014B216ACD67001505F4 /* Animation_Engine.entitlements */,
+			);
+			path = "Other FIles";
+			sourceTree = "<group>";
+		};
+		EB4D0160216ACE13001505F4 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				EB4D0147216ACD67001505F4 /* Main.storyboard */,
+				EB4D0161216ACEF4001505F4 /* GraphicsView.swift */,
+			);
+			path = Display;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,8 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB4D0144216ACD66001505F4 /* ViewController.swift in Sources */,
 				EB4D0142216ACD66001505F4 /* AppDelegate.swift in Sources */,
+				EB4D0162216ACEF4001505F4 /* GraphicsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,10 +365,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Animation_Engine/Animation_Engine.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Animation_Engine/Other Files/Animation_Engine.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Animation_Engine/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Animation_Engine/Other FIles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -367,10 +383,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Animation_Engine/Animation_Engine.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Animation_Engine/Other Files/Animation_Engine.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Animation_Engine/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Animation_Engine/Other FIles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
