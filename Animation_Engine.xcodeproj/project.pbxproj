@@ -12,6 +12,10 @@
 		EB4D0149216ACD67001505F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4D0147216ACD67001505F4 /* Main.storyboard */; };
 		EB4D0155216ACD68001505F4 /* Animation_EngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0154216ACD68001505F4 /* Animation_EngineTests.swift */; };
 		EB4D0162216ACEF4001505F4 /* GraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0161216ACEF4001505F4 /* GraphicsView.swift */; };
+		EB4D0165216AD240001505F4 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0164216AD240001505F4 /* Renderer.swift */; };
+		EB4D0167216AD377001505F4 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0166216AD377001505F4 /* Engine.swift */; };
+		EB4D016A216AD61E001505F4 /* GraphicsShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0169216AD61E001505F4 /* GraphicsShaders.metal */; };
+		EB4D016C216AD7B8001505F4 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D016B216AD7B8001505F4 /* Types.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,10 @@
 		EB4D0154216ACD68001505F4 /* Animation_EngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation_EngineTests.swift; sourceTree = "<group>"; };
 		EB4D0156216ACD68001505F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB4D0161216ACEF4001505F4 /* GraphicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsView.swift; sourceTree = "<group>"; };
+		EB4D0164216AD240001505F4 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		EB4D0166216AD377001505F4 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		EB4D0169216AD61E001505F4 /* GraphicsShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = GraphicsShaders.metal; sourceTree = "<group>"; };
+		EB4D016B216AD7B8001505F4 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,8 @@
 		EB4D0140216ACD65001505F4 /* Animation_Engine */ = {
 			isa = PBXGroup;
 			children = (
+				EB4D0168216AD60D001505F4 /* Shaders */,
+				EB4D0163216AD235001505F4 /* Engine */,
 				EB4D0160216ACE13001505F4 /* Display */,
 				EB4D015F216ACE0B001505F4 /* Other FIles */,
 			);
@@ -105,10 +115,28 @@
 		EB4D0160216ACE13001505F4 /* Display */ = {
 			isa = PBXGroup;
 			children = (
-				EB4D0147216ACD67001505F4 /* Main.storyboard */,
 				EB4D0161216ACEF4001505F4 /* GraphicsView.swift */,
+				EB4D0147216ACD67001505F4 /* Main.storyboard */,
 			);
 			path = Display;
+			sourceTree = "<group>";
+		};
+		EB4D0163216AD235001505F4 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				EB4D0166216AD377001505F4 /* Engine.swift */,
+				EB4D016B216AD7B8001505F4 /* Types.swift */,
+				EB4D0164216AD240001505F4 /* Renderer.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		EB4D0168216AD60D001505F4 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				EB4D0169216AD61E001505F4 /* GraphicsShaders.metal */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB4D0142216ACD66001505F4 /* AppDelegate.swift in Sources */,
+				EB4D0167216AD377001505F4 /* Engine.swift in Sources */,
+				EB4D0165216AD240001505F4 /* Renderer.swift in Sources */,
+				EB4D016C216AD7B8001505F4 /* Types.swift in Sources */,
 				EB4D0162216ACEF4001505F4 /* GraphicsView.swift in Sources */,
+				EB4D016A216AD61E001505F4 /* GraphicsShaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
