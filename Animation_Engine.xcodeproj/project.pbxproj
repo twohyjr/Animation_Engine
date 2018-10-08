@@ -22,6 +22,14 @@
 		EB4D017B216AE35E001505F4 /* ColladaLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D017A216AE35E001505F4 /* ColladaLoader.swift */; };
 		EB4D017D216AE3BE001505F4 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D017C216AE3BE001505F4 /* Mesh.swift */; };
 		EB4D0180216AF52E001505F4 /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D017F216AF52E001505F4 /* Maths.swift */; };
+		EB4D0182216B0232001505F4 /* GeometryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0181216B0232001505F4 /* GeometryLoader.swift */; };
+		EB4D0185216B027C001505F4 /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0184216B027C001505F4 /* XML.swift */; };
+		EB4D0188216B0359001505F4 /* GeometryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0187216B0359001505F4 /* GeometryData.swift */; };
+		EB4D018C216B04C6001505F4 /* CobowyTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = EB4D018A216B04C5001505F4 /* CobowyTexture.png */; };
+		EB4D018D216B04C6001505F4 /* Cowboy.dae in Resources */ = {isa = PBXBuildFile; fileRef = EB4D018B216B04C6001505F4 /* Cowboy.dae */; };
+		EB4D0190216B0A1C001505F4 /* String_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D018F216B0A1C001505F4 /* String_Extensions.swift */; };
+		EB4D0192216B13FF001505F4 /* float3_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0191216B13FF001505F4 /* float3_extensions.swift */; };
+		EB4D0194216B14F5001505F4 /* TextureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0193216B14F5001505F4 /* TextureLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,14 @@
 		EB4D017A216AE35E001505F4 /* ColladaLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColladaLoader.swift; sourceTree = "<group>"; };
 		EB4D017C216AE3BE001505F4 /* Mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
 		EB4D017F216AF52E001505F4 /* Maths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
+		EB4D0181216B0232001505F4 /* GeometryLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryLoader.swift; sourceTree = "<group>"; };
+		EB4D0184216B027C001505F4 /* XML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XML.swift; sourceTree = "<group>"; };
+		EB4D0187216B0359001505F4 /* GeometryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryData.swift; sourceTree = "<group>"; };
+		EB4D018A216B04C5001505F4 /* CobowyTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CobowyTexture.png; sourceTree = "<group>"; };
+		EB4D018B216B04C6001505F4 /* Cowboy.dae */ = {isa = PBXFileReference; explicitFileType = compiled; fileEncoding = 4; path = Cowboy.dae; sourceTree = "<group>"; };
+		EB4D018F216B0A1C001505F4 /* String_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_Extensions.swift; sourceTree = "<group>"; };
+		EB4D0191216B13FF001505F4 /* float3_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = float3_extensions.swift; sourceTree = "<group>"; };
+		EB4D0193216B14F5001505F4 /* TextureLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +113,13 @@
 			isa = PBXGroup;
 			children = (
 				EB4D0179216AE312001505F4 /* Loaders */,
-				EB4D017E216AF51B001505F4 /* Maths */,
 				EB4D0174216AE064001505F4 /* Models */,
 				EB4D016D216ADDA0001505F4 /* Environment */,
 				EB4D0168216AD60D001505F4 /* Shaders */,
 				EB4D0163216AD235001505F4 /* Engine */,
 				EB4D0160216ACE13001505F4 /* Display */,
+				EB4D0183216B025D001505F4 /* Util */,
+				EB4D0189216B04AE001505F4 /* Resources */,
 				EB4D015F216ACE0B001505F4 /* Other FIles */,
 			);
 			path = Animation_Engine;
@@ -177,6 +194,9 @@
 			isa = PBXGroup;
 			children = (
 				EB4D017A216AE35E001505F4 /* ColladaLoader.swift */,
+				EB4D0181216B0232001505F4 /* GeometryLoader.swift */,
+				EB4D0193216B14F5001505F4 /* TextureLoader.swift */,
+				EB4D0186216B0349001505F4 /* geometry */,
 			);
 			path = Loaders;
 			sourceTree = "<group>";
@@ -187,6 +207,42 @@
 				EB4D017F216AF52E001505F4 /* Maths.swift */,
 			);
 			path = Maths;
+			sourceTree = "<group>";
+		};
+		EB4D0183216B025D001505F4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EB4D0184216B027C001505F4 /* XML.swift */,
+				EB4D017E216AF51B001505F4 /* Maths */,
+				EB4D018E216B0A07001505F4 /* Extensions */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		EB4D0186216B0349001505F4 /* geometry */ = {
+			isa = PBXGroup;
+			children = (
+				EB4D0187216B0359001505F4 /* GeometryData.swift */,
+			);
+			path = geometry;
+			sourceTree = "<group>";
+		};
+		EB4D0189216B04AE001505F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB4D018A216B04C5001505F4 /* CobowyTexture.png */,
+				EB4D018B216B04C6001505F4 /* Cowboy.dae */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EB4D018E216B0A07001505F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EB4D018F216B0A1C001505F4 /* String_Extensions.swift */,
+				EB4D0191216B13FF001505F4 /* float3_extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +326,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4D018C216B04C6001505F4 /* CobowyTexture.png in Resources */,
+				EB4D018D216B04C6001505F4 /* Cowboy.dae in Resources */,
 				EB4D0146216ACD67001505F4 /* Assets.xcassets in Resources */,
 				EB4D0149216ACD67001505F4 /* Main.storyboard in Resources */,
 			);
@@ -296,10 +354,16 @@
 				EB4D0167216AD377001505F4 /* Engine.swift in Sources */,
 				EB4D0165216AD240001505F4 /* Renderer.swift in Sources */,
 				EB4D016C216AD7B8001505F4 /* Types.swift in Sources */,
+				EB4D0188216B0359001505F4 /* GeometryData.swift in Sources */,
+				EB4D0190216B0A1C001505F4 /* String_Extensions.swift in Sources */,
+				EB4D0185216B027C001505F4 /* XML.swift in Sources */,
+				EB4D0192216B13FF001505F4 /* float3_extensions.swift in Sources */,
 				EB4D0176216AE070001505F4 /* RiggedModel.swift in Sources */,
 				EB4D016F216ADE3C001505F4 /* Scene.swift in Sources */,
 				EB4D0162216ACEF4001505F4 /* GraphicsView.swift in Sources */,
+				EB4D0194216B14F5001505F4 /* TextureLoader.swift in Sources */,
 				EB4D016A216AD61E001505F4 /* GraphicsShaders.metal in Sources */,
+				EB4D0182216B0232001505F4 /* GeometryLoader.swift in Sources */,
 				EB4D0180216AF52E001505F4 /* Maths.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,14 +9,14 @@ class Scene {
     
     public init() {
         createScene()
-        
     }
     
     public func createScene() {
         //Add model to scene
-        riggedModel = RiggedModel()
+        riggedModel = RiggedModel(modelName: "Cowboy", textureName: "CobowyTexture.png")
+        riggedModel.setPositionY(-4)
 
-        camera.setPositionZ(5)
+        camera.setPositionZ(14)
     }
     
     public func update(_ deltaTime: Float){

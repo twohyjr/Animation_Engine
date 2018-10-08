@@ -6,10 +6,14 @@ class RiggedModel {
     private var _scale = float3(1.0)
     
     private var modelConstants = ModelConstants()
+    private var texture: MTLTexture!
     private var mesh: Mesh!
     
-    init() {
-        mesh = ColladaLoader.loadModelMesh()
+    init(modelName: String, textureName: String = "") {
+        if(textureName != ""){
+            self.texture = TextureLoader.Load(imageName: textureName)
+        }
+        mesh = ColladaLoader.loadModelMesh(modelName: modelName)
     }
     
     public func update(_ deltaTime: Float){
@@ -22,6 +26,10 @@ class RiggedModel {
     
     public func render(_ renderCommandEncoder: MTLRenderCommandEncoder){
         renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 2)
+        
+        if(texture != nil){
+            renderCommandEncoder.setFragmentTexture(texture, index: 0)            
+        }
         
         mesh.draw(renderCommandEncoder)
     }

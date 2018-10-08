@@ -21,6 +21,7 @@ struct SceneConstants {
 
 struct RasterizeData {
     float4 position [[ position ]];
+    float2 textureCoords;
 };
 
 vertex RasterizeData animation_vertex_shader(Vertex vertexIn [[ stage_in ]],
@@ -29,13 +30,16 @@ vertex RasterizeData animation_vertex_shader(Vertex vertexIn [[ stage_in ]],
     RasterizeData rd;
     
     rd.position = sceneConstants.projectionMatrix * sceneConstants.viewMatrix * modelConstants.modelMatrix *  float4(vertexIn.position, 1.0);
+    rd.textureCoords = vertexIn.textureCoords;
     
     return rd;
 }
 
-fragment half4 animation_fragment_shader(RasterizeData rd [[ stage_in ]]) {
-    float4 color = float4(0.6, 0.3, 0.1, 1.0);
+fragment half4 animation_fragment_shader(RasterizeData rd [[ stage_in ]],
+                                         sampler sampler2d [[ sampler(0) ]],
+                                         texture2d<float> texture [[ texture(0) ]]) {
+    float4 color = texture.sample(sampler2d, rd.textureCoords);
     
-    return half4(color.r, color.g, color.b, color.a);
+    return half4(color.r, color.g, color.b, color.a) * 1.7;
 }
 

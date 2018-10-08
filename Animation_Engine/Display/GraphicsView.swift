@@ -8,7 +8,7 @@ class GraphicsView: MTKView {
         
         self.device = MTLCreateSystemDefaultDevice()
         
-        self.clearColor = MTLClearColor(red: 0.3, green: 0.3, blue: 0.4, alpha: 1.0)
+        self.clearColor = MTLClearColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0)
         
         self.colorPixelFormat = .bgra8Unorm
         

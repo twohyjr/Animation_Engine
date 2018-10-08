@@ -6,6 +6,8 @@ class Renderer: NSObject {
     var vertexDescriptor: MTLVertexDescriptor!
     var renderPipelineState: MTLRenderPipelineState!
     var depthStencilState: MTLDepthStencilState!
+    var samplerState: MTLSamplerState!
+    
     var scene: Scene!
     
     override init() {
@@ -14,6 +16,8 @@ class Renderer: NSObject {
         initializeVertexDescriptor()
         
         initializeDepthStencilState()
+        
+        initializeSamplerState()
         
         initializeRenderPipelineState()
         
@@ -77,6 +81,14 @@ class Renderer: NSObject {
         depthStencilState = Engine.Device.makeDepthStencilState(descriptor: depthStencilDescriptor)!
     }
     
+    private func initializeSamplerState() {
+        let samplerDescriptor = MTLSamplerDescriptor()
+        samplerDescriptor.compareFunction = .less
+        samplerDescriptor.minFilter = .linear
+        samplerDescriptor.magFilter = .linear
+        samplerState = Engine.Device.makeSamplerState(descriptor: samplerDescriptor)!
+    }
+    
     private func initializeScene(){
         scene = Scene()
     }
@@ -95,6 +107,7 @@ extension Renderer: MTKViewDelegate {
         let renderCommandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
         renderCommandEncoder?.setRenderPipelineState(renderPipelineState)
         renderCommandEncoder?.setDepthStencilState(depthStencilState)
+        renderCommandEncoder?.setFragmentSamplerState(samplerState, index: 0)
         
         let deltaTime = 1 / Float(view.preferredFramesPerSecond)
         
