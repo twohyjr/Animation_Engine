@@ -1,6 +1,8 @@
 import MetalKit
 
 class Renderer: NSObject {
+    public static var AspectRatio: Float = 0.0
+    
     var vertexDescriptor: MTLVertexDescriptor!
     var renderPipelineState: MTLRenderPipelineState!
     var depthStencilState: MTLDepthStencilState!
@@ -83,7 +85,7 @@ class Renderer: NSObject {
 extension Renderer: MTKViewDelegate {
     
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-        //TODO: Update view when resized
+        Renderer.AspectRatio = Float(size.width) / Float(size.height)
     }
     
     func draw(in view: MTKView) {

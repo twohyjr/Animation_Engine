@@ -25,12 +25,10 @@ struct RasterizeData {
 
 vertex RasterizeData animation_vertex_shader(Vertex vertexIn [[ stage_in ]],
                                              constant SceneConstants &sceneConstants [[ buffer(1) ]],
-                                             constant ModelConstants &modelConstants [[ buffer(2) ]],
-                                             constant float4x4 *jointTransforms [[ buffer(3) ]]) {
+                                             constant ModelConstants &modelConstants [[ buffer(2) ]]) {
     RasterizeData rd;
     
-    float4x4 projectionViewMatrix = sceneConstants.projectionMatrix * sceneConstants.viewMatrix;
-    rd.position = projectionViewMatrix *  float4(vertexIn.position, 1.0);
+    rd.position = sceneConstants.projectionMatrix * sceneConstants.viewMatrix * modelConstants.modelMatrix *  float4(vertexIn.position, 1.0);
     
     return rd;
 }

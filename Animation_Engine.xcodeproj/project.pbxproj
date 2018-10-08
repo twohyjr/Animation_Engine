@@ -21,6 +21,7 @@
 		EB4D0176216AE070001505F4 /* RiggedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0175216AE070001505F4 /* RiggedModel.swift */; };
 		EB4D017B216AE35E001505F4 /* ColladaLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D017A216AE35E001505F4 /* ColladaLoader.swift */; };
 		EB4D017D216AE3BE001505F4 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D017C216AE3BE001505F4 /* Mesh.swift */; };
+		EB4D0180216AF52E001505F4 /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D017F216AF52E001505F4 /* Maths.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		EB4D0175216AE070001505F4 /* RiggedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiggedModel.swift; sourceTree = "<group>"; };
 		EB4D017A216AE35E001505F4 /* ColladaLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColladaLoader.swift; sourceTree = "<group>"; };
 		EB4D017C216AE3BE001505F4 /* Mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
+		EB4D017F216AF52E001505F4 /* Maths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				EB4D0179216AE312001505F4 /* Loaders */,
+				EB4D017E216AF51B001505F4 /* Maths */,
 				EB4D0174216AE064001505F4 /* Models */,
 				EB4D016D216ADDA0001505F4 /* Environment */,
 				EB4D0168216AD60D001505F4 /* Shaders */,
@@ -176,6 +179,14 @@
 				EB4D017A216AE35E001505F4 /* ColladaLoader.swift */,
 			);
 			path = Loaders;
+			sourceTree = "<group>";
+		};
+		EB4D017E216AF51B001505F4 /* Maths */ = {
+			isa = PBXGroup;
+			children = (
+				EB4D017F216AF52E001505F4 /* Maths.swift */,
+			);
+			path = Maths;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 				EB4D016F216ADE3C001505F4 /* Scene.swift in Sources */,
 				EB4D0162216ACEF4001505F4 /* GraphicsView.swift in Sources */,
 				EB4D016A216AD61E001505F4 /* GraphicsShaders.metal in Sources */,
+				EB4D0180216AF52E001505F4 /* Maths.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

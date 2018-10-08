@@ -16,11 +16,14 @@ class Scene {
         //Add model to scene
         riggedModel = RiggedModel()
 
-        
+        camera.setPositionZ(5)
     }
     
     public func update(_ deltaTime: Float){
-        self.camera.updateSceneConstants(&sceneConstants)
+        self.sceneConstants.viewMatrix = camera.viewMatrix
+        self.sceneConstants.projectionMatrix = camera.projectionMatrix
+        
+        self.riggedModel.rotateY(deltaTime)
         
         self.riggedModel.update(deltaTime)
     }

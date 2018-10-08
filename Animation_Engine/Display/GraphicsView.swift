@@ -18,6 +18,8 @@ class GraphicsView: MTKView {
         
         self.renderer = Renderer()
         
+        Renderer.AspectRatio = Float(self.drawableSize.width) / Float(self.drawableSize.height)
+        
         self.delegate = renderer
     }
     

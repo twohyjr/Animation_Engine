@@ -20,7 +20,6 @@ class Mesh {
     }
     
     private func generateBuffers(){
-        
         vertexBuffer = Engine.Device.makeBuffer(bytes: self.vertices, length: Vertex.stride(vertexCount), options: [])
         indexBuffer = Engine.Device.makeBuffer(bytes: self.indices, length: UInt16.stride(indexCount), options: [])
     }
