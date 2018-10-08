@@ -16,6 +16,11 @@
 		EB4D0167216AD377001505F4 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0166216AD377001505F4 /* Engine.swift */; };
 		EB4D016A216AD61E001505F4 /* GraphicsShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0169216AD61E001505F4 /* GraphicsShaders.metal */; };
 		EB4D016C216AD7B8001505F4 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D016B216AD7B8001505F4 /* Types.swift */; };
+		EB4D016F216ADE3C001505F4 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D016E216ADE3C001505F4 /* Scene.swift */; };
+		EB4D0171216ADFF2001505F4 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0170216ADFF2001505F4 /* Camera.swift */; };
+		EB4D0176216AE070001505F4 /* RiggedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D0175216AE070001505F4 /* RiggedModel.swift */; };
+		EB4D017B216AE35E001505F4 /* ColladaLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D017A216AE35E001505F4 /* ColladaLoader.swift */; };
+		EB4D017D216AE3BE001505F4 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D017C216AE3BE001505F4 /* Mesh.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,11 @@
 		EB4D0166216AD377001505F4 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		EB4D0169216AD61E001505F4 /* GraphicsShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = GraphicsShaders.metal; sourceTree = "<group>"; };
 		EB4D016B216AD7B8001505F4 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		EB4D016E216ADE3C001505F4 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		EB4D0170216ADFF2001505F4 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		EB4D0175216AE070001505F4 /* RiggedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiggedModel.swift; sourceTree = "<group>"; };
+		EB4D017A216AE35E001505F4 /* ColladaLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColladaLoader.swift; sourceTree = "<group>"; };
+		EB4D017C216AE3BE001505F4 /* Mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,9 @@
 		EB4D0140216ACD65001505F4 /* Animation_Engine */ = {
 			isa = PBXGroup;
 			children = (
+				EB4D0179216AE312001505F4 /* Loaders */,
+				EB4D0174216AE064001505F4 /* Models */,
+				EB4D016D216ADDA0001505F4 /* Environment */,
 				EB4D0168216AD60D001505F4 /* Shaders */,
 				EB4D0163216AD235001505F4 /* Engine */,
 				EB4D0160216ACE13001505F4 /* Display */,
@@ -137,6 +150,32 @@
 				EB4D0169216AD61E001505F4 /* GraphicsShaders.metal */,
 			);
 			path = Shaders;
+			sourceTree = "<group>";
+		};
+		EB4D016D216ADDA0001505F4 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				EB4D016E216ADE3C001505F4 /* Scene.swift */,
+				EB4D0170216ADFF2001505F4 /* Camera.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		EB4D0174216AE064001505F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB4D0175216AE070001505F4 /* RiggedModel.swift */,
+				EB4D017C216AE3BE001505F4 /* Mesh.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EB4D0179216AE312001505F4 /* Loaders */ = {
+			isa = PBXGroup;
+			children = (
+				EB4D017A216AE35E001505F4 /* ColladaLoader.swift */,
+			);
+			path = Loaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,10 +278,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4D0171216ADFF2001505F4 /* Camera.swift in Sources */,
+				EB4D017D216AE3BE001505F4 /* Mesh.swift in Sources */,
+				EB4D017B216AE35E001505F4 /* ColladaLoader.swift in Sources */,
 				EB4D0142216ACD66001505F4 /* AppDelegate.swift in Sources */,
 				EB4D0167216AD377001505F4 /* Engine.swift in Sources */,
 				EB4D0165216AD240001505F4 /* Renderer.swift in Sources */,
 				EB4D016C216AD7B8001505F4 /* Types.swift in Sources */,
+				EB4D0176216AE070001505F4 /* RiggedModel.swift in Sources */,
+				EB4D016F216ADE3C001505F4 /* Scene.swift in Sources */,
 				EB4D0162216ACEF4001505F4 /* GraphicsView.swift in Sources */,
 				EB4D016A216AD61E001505F4 /* GraphicsShaders.metal in Sources */,
 			);

@@ -3,13 +3,19 @@ import MetalKit
 class Renderer: NSObject {
     var vertexDescriptor: MTLVertexDescriptor!
     var renderPipelineState: MTLRenderPipelineState!
+    var depthStencilState: MTLDepthStencilState!
+    var scene: Scene!
     
     override init() {
         super.init()
         
         initializeVertexDescriptor()
         
+        initializeDepthStencilState()
+        
         initializeRenderPipelineState()
+        
+        initializeScene()
     }
     
     private func initializeVertexDescriptor() {
@@ -61,6 +67,17 @@ class Renderer: NSObject {
             print(error)
         }
     }
+    
+    private func initializeDepthStencilState(){
+        let depthStencilDescriptor = MTLDepthStencilDescriptor()
+        depthStencilDescriptor.isDepthWriteEnabled = true
+        depthStencilDescriptor.depthCompareFunction = .less
+        depthStencilState = Engine.Device.makeDepthStencilState(descriptor: depthStencilDescriptor)!
+    }
+    
+    private func initializeScene(){
+        scene = Scene()
+    }
 }
 
 extension Renderer: MTKViewDelegate {
@@ -75,6 +92,14 @@ extension Renderer: MTKViewDelegate {
         let commandBuffer = Engine.CommandQueue.makeCommandBuffer()
         let renderCommandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
         renderCommandEncoder?.setRenderPipelineState(renderPipelineState)
+        renderCommandEncoder?.setDepthStencilState(depthStencilState)
+        
+        let deltaTime = 1 / Float(view.preferredFramesPerSecond)
+        
+        scene.update(deltaTime)
+        
+        scene.render(renderCommandEncoder!)
+        
         renderCommandEncoder?.endEncoding()
         commandBuffer?.present(drawable)
         commandBuffer?.commit()
